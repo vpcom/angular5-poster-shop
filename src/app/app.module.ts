@@ -100,7 +100,9 @@ import { CartNotificationService } from './shared/cart-notification.service';
     MatToolbarModule,
     MatTooltipModule
   ],
-  providers: [CartNotificationService],
+  providers: [
+    CartNotificationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

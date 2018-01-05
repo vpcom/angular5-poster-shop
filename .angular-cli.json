@@ -8,7 +8,8 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
+        "assets/style",
+        "assets/img",
         "favicon.ico"
       ],
       "index": "index.html",
