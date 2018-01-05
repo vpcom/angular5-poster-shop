@@ -1,5 +1,7 @@
 
 footer {
+    // var ... height -> padding body
+    height: 50px;
     line-height: 50px;
     position: fixed; 
 
@@ -9,4 +11,14 @@ footer {
 
     text-align: center;
     z-index: 10;
+
+    background-color: #334455;
+
+    a[href].visible {
+        color:#88aacc;
+    } 
+
+    span#copyright, span#copyright a {
+        color: #001122;
+    }
 }

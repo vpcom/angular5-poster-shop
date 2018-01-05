@@ -1,0 +1,4 @@
+
+<div class="content" fxLayout="row wrap" fxLayout.xs="column" fxFlexFill>
+  <app-card *ngFor="let dataItem of observableData | async" fxFlex="30" [poster]="dataItem"></app-card>
+</div>

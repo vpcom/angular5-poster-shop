@@ -1,6 +1,7 @@
+// Basic imports
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+// Components
 import {
   // todo clean
   MatAutocompleteModule,
@@ -37,7 +38,8 @@ import {
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { Http, HttpModule } from '@angular/http';
+// Local components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -47,8 +49,14 @@ import { CartComponent } from './cart/cart.component';
 import { BuyComponent } from './buy/buy.component';
 import { LogsComponent } from './logs/logs.component';
 import { NotifComponent } from './notif/notif.component';
-
+import { CardComponent } from './card/card.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './details/details.component';
+// Services
 import { CartNotificationService } from './shared/cart-notification.service';
+import { DataService } from './shared/data.service';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +68,10 @@ import { CartNotificationService } from './shared/cart-notification.service';
     CartComponent,
     BuyComponent,
     LogsComponent,
-    NotifComponent
+    NotifComponent,
+    CardComponent,
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -98,11 +109,16 @@ import { CartNotificationService } from './shared/cart-notification.service';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    AppRoutingModule,
+
+    HttpModule
   ],
   providers: [
-    CartNotificationService
+    CartNotificationService,
+    DataService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
