@@ -12,11 +12,10 @@ export class HeaderComponent implements OnInit {
 
   TITLE: string = GLOBALS.APP_TITLE;
 
-  baseHref: string = '';
+  baseHref: string = environment.baseHref;
 
   constructor() { }
 
   ngOnInit() {
-    this.baseHref = environment.baseHref;
   }
 }

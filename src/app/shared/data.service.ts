@@ -6,18 +6,18 @@ import 'rxjs/add/operator/catch';
 
 import { PosterType } from '../shared/poster.type';
 
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class DataService {
-  private dataUrl: string = '../../assets/data/space_invaders.json'; // {{ baseHref }}
+
+  dataUrl: string = environment.baseHref + '/assets/data/space_invaders.json';
 
   constructor(private http: Http) { }
 
   getData(): Observable<PosterType[]> {
-    console.log("getdata");
     return this.http.get(this.dataUrl)
         .map(res => {
-          console.log(res.json().data);
             return <PosterType[]>res.json().data || {}; 
         })
         .catch(this.handleError);

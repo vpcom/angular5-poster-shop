@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { PosterType } from '../shared/poster.type';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -10,6 +12,9 @@ import { PosterType } from '../shared/poster.type';
 export class CardComponent implements OnInit {
 
   @Input() poster: PosterType = null;
+
+  baseUrl: string = environment.production ?
+      environment.baseHref + '/assets/img/' : '../../assets/img/';
 
   constructor() { }
 
