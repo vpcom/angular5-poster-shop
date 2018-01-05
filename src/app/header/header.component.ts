@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { environment } from '../../environments/environment';
+import * as GLOBALS from '../../../globals';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { environment } from '../../environments/environment';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() title: string = null;
+  TITLE: string = GLOBALS.APP_TITLE;
 
   baseHref: string = '';
 

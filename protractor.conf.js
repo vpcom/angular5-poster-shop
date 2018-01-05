@@ -9,7 +9,10 @@ exports.config = {
     './e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    "chromeOptions": {
+      binary: "/Applications/1 Apps/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',

@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  appTitle = 'Poster Shop';
-
   constructor() { }
 
   ngOnInit() {

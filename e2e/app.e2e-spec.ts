@@ -1,4 +1,7 @@
 import { AppPage } from './app.po';
+import * as GLOBALS from '../globals';
+
+const TITLE: string = GLOBALS.APP_TITLE;
 
 describe('angular5-poster-shop App', () => {
   let page: AppPage;
@@ -7,8 +10,8 @@ describe('angular5-poster-shop App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the application title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual(TITLE);
   });
 });
