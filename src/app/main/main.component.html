@@ -1,3 +1,16 @@
-<p>
-  main works!
-</p>
+
+<mat-sidenav-container id="sidenav-layout" fxLayout="row" fxFlexFill>
+
+  <mat-sidenav-content fxFlex>
+      <app-core></app-core>
+  </mat-sidenav-content>
+
+  <mat-sidenav id="sidenav" *ngIf="!media.isActive('xs')" align="end" mode="side" role="navigation" [(opened)]="opened" fxFlex="200px" fxShow  >
+      <app-cart></app-cart>
+  </mat-sidenav>
+
+  <mat-sidenav id="sidenav-mob" *ngIf="media.isActive('xs')" align="end" mode="over" role="navigation" [(opened)]="opened" fxFlex="200px" fxHide >
+      <app-cart></app-cart>
+  </mat-sidenav>
+    
+</mat-sidenav-container>

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+
+// TODO make own theme
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+
+/* global style */
+html * {
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* global style classes */
+.align-right {
+    text-align: right;
+}
