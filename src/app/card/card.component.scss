@@ -1,5 +1,8 @@
+
 mat-card {
     width: 200px;
+    display: block;
+    margin: 0 auto;
 
     background-color: #ccbbaa;
 
@@ -16,8 +19,13 @@ mat-card {
             vertical-align: middle;
         }
     }
-    
+
+    .card-title {
+        margin-top: 0;
+        height: 3em; // TODO var 2 times mat card font height
+    }
+
     mat-card-actions {
         text-align: center;
     }
- }
+}
