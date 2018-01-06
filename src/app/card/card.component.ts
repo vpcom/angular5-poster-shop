@@ -23,6 +23,6 @@ export class CardComponent implements OnInit {
 
   // TODO: ellipsis directive could be nice
   shortenText(text:string) {
-    return text.substring(0, 200);
+    return text.substring(0, 100);
   }
 }

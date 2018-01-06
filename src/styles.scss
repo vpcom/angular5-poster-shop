@@ -2,8 +2,12 @@
 // TODO make own theme
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+// dirty template class override
+i.material-icons {
+    color: #112233;
+}
 
-/* global style */
+// global style
 html * {
     font-family: Helvetica, Arial, Sans-Serif;
 }
@@ -24,7 +28,7 @@ a:hover {
     text-decoration: underline;
 } 
 
-/* global style classes */
+// global style classes
 .align-right {
     text-align: right;
 }

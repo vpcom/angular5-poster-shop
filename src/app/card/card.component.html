@@ -1,10 +1,11 @@
 
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title><h2 class="cardTitle">{{ poster.name}}</h2></mat-card-title>
   </mat-card-header>
-  <a [routerLink]="['../details', poster.id]" ><img mat-card-image src="{{baseUrl}}{{ poster.img }}" alt="A space invader poster"></a>
+  <div class="image-container">
+    <a [routerLink]="['../details', poster.id]" ><img src="{{baseUrl}}{{ poster.img }}" alt="A space invader poster"></a>
+  </div>
   <mat-card-content>
     <p>
       {{ shortenText(poster.text) }}...
