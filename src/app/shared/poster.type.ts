@@ -4,3 +4,10 @@ export class PosterType {
     img: string;
     text: string;
 }
+
+export const emptyPoster: PosterType = {
+    id: -1,
+    name: '',
+    img: '',
+    text: '',
+};

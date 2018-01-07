@@ -1,7 +1,18 @@
 <div id="cart-container">
   <div id="cart-content">
-    <p>
+    <p *ngIf="(posterList$ | async).length === 0">
       Your cart is empty, select the poster of your dreams!
     </p>
+    <div *ngIf="(posterList$ | async).length !== 0">
+      <button mat-button [routerLink]="['../buy']">BUY</button>
+      <div *ngFor="let poster of posterList$ | async" >
+        <div class="my-card">
+          <span class="card-title">{{ poster.name }}</span>
+          <div class="image-container">
+            <img src="{{ baseUrl }}{{ poster.img }}">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

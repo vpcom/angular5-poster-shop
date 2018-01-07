@@ -56,6 +56,11 @@ import { DetailsComponent } from './details/details.component';
 // Services
 import { CartNotificationService } from './shared/cart-notification.service';
 import { DataService } from './shared/data.service';
+// router, store and reducers
+import { RouterModule } from '@angular/router';
+import { StoreModule, combineReducers } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './store';
 
 
 @NgModule({
@@ -110,9 +115,12 @@ import { DataService } from './shared/data.service';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    AppRoutingModule,
+    
+    HttpModule,
 
-    HttpModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [
     CartNotificationService,

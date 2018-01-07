@@ -30,9 +30,8 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.id = params["id"];
-   });
-
-   this.observableItem = this.dataService.getItem(+this.id);
+    });
+    this.observableItem = this.dataService.getItem(+this.id);
 
   }
 
