@@ -1,3 +1,12 @@
-<p>
-  buy works!
-</p>
+<div id="cart-container">
+    <div id="cart-content">
+      <p *ngIf="(posterList$ | async).length === 0">
+        Well, nothing to buy yet...
+      </p>
+      <div *ngIf="(posterList$ | async).length !== 0">
+        <div *ngFor="let poster of posterList$ | async" >
+          <span class="card-title">{{ poster.name }}</span><br>
+        </div>
+      </div>
+    </div>
+  </div>

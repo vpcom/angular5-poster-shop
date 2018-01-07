@@ -3,7 +3,7 @@
   <mat-card-header fxLayout>
     <mat-card-title><h2 class="card-title">{{ (observableItem | async)?.name }}</h2></mat-card-title>
     <mat-card-actions>
-      <button mat-button>BUY</button>
+      <button mat-button (click)="take()">TAKE</button>
     </mat-card-actions>
   </mat-card-header>
 

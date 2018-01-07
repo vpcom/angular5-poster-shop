@@ -17,12 +17,9 @@ export class CartComponent implements OnInit {
   baseUrl: string = environment.production ?
       environment.baseHref + '/assets/img/' : '../../assets/img/';
 
-
   constructor(private store: Store<any>) {
     this.posterList$ = this.store.select('cartContent');
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import {Store} from "@ngrx/store";
+import { Component, OnInit, Input } from '@angular/core';
+import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
 import { Subscription } from 'rxjs/Subscription';
 
 import { PosterType } from '../shared/poster.type';
-import { ADD } from './../store/cart';
+import { ADD } from './../store/cart.reducer';
 import { environment } from '../../environments/environment';
 
 
@@ -13,12 +13,10 @@ import { environment } from '../../environments/environment';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit, OnDestroy {
+export class CardComponent implements OnInit {
 
   posterObservable$: Observable<PosterType[]>;
-  private tagStateSubscription: Subscription;
   posters: PosterType[];
-  done = false;
 
   test: PosterType;
 
@@ -31,25 +29,17 @@ export class CardComponent implements OnInit, OnDestroy {
     this.posterObservable$ = this.store.select<any>('poster')
   }
 
-  ngOnInit() {
-    this.tagStateSubscription = this.posterObservable$.subscribe((state) => {
-      this.posters = state;
-    });
-  }
+  ngOnInit() { }
 
   // TODO  ellipsis directive
   shortenText(text:string) {
     return text.substring(0, 100);
   }
 
-  buy() {
+  take() {
     this.store.dispatch({
       type: 'ADD',
       payload: this.poster
     });
-  }
-
-  ngOnDestroy() {
-    this.tagStateSubscription.unsubscribe();
   }
 }
