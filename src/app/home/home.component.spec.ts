@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { HomeComponent } from './home.component';
+
+import { DataService } from '../shared/data.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,7 +12,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      imports: [ HttpModule ],
+      declarations: [ HomeComponent ],
+      providers: [ DataService ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

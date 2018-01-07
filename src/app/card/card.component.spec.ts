@@ -10,7 +10,7 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [ RouterTestingModule ],
       declarations: [ CardComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
@@ -20,6 +20,14 @@ describe('CardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
+
+    component.poster = {
+      id: 1,
+      name: '',
+      img: '',
+      text: ''
+    };
+
     fixture.detectChanges();
   });
 
