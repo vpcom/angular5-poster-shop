@@ -1,10 +1,10 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title><h2 class="card-title">{{ poster.name}}</h2></mat-card-title>
+    <mat-card-title><h2 class="card-title">{{ poster.name }}</h2></mat-card-title>
   </mat-card-header>
   <div class="image-container">
-    <a [routerLink]="['../details', poster.id]" ><img src="{{baseUrl}}{{ poster.img }}" alt="A space invader poster"></a>
+    <a [routerLink]="['../details', poster.id]" ><img src="{{ baseUrl }}{{ poster.img }}" alt="A space invader poster"></a>
   </div>
   <mat-card-content>
     <p>
