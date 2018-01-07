@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
       environment.baseHref + '/assets/img/' : '../../assets/img/';
 
   constructor(private store: Store<any>) {
-    this.posterObservable$ = this.store.select<any>('poster')
+    this.posterObservable$ = this.store.select<any>('cartContent');
   }
 
   ngOnInit() { }
