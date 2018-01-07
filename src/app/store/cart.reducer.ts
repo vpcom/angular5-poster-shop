@@ -9,7 +9,7 @@ export interface CartState {
 // TODO enum
 export const ADD = 'ADD';
 
-export const cartReducer = (state: PosterType[] = [], action) => {
+export function cartReducer(state: PosterType[] = [], action) {
   switch (action.type) {
 
     case ADD:
@@ -18,4 +18,4 @@ export const cartReducer = (state: PosterType[] = [], action) => {
     default:
       return state;
   }
-};
+}
