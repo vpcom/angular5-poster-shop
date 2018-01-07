@@ -50,14 +50,13 @@ import { BuyComponent } from './buy/buy.component';
 import { LogsComponent } from './logs/logs.component';
 import { NotifComponent } from './notif/notif.component';
 import { CardComponent } from './card/card.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 // Services
 import { CartNotificationService } from './shared/cart-notification.service';
 import { DataService } from './shared/data.service';
 // router, store and reducers
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store';

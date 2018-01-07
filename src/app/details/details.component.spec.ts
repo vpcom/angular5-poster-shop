@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule, combineReducers } from '@ngrx/store';
+import { reducers } from '../store';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpModule } from '@angular/http';
@@ -15,7 +17,8 @@ describe('DetailsComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpModule
+        HttpModule,
+        StoreModule.forRoot(reducers)
       ],
       declarations: [ DetailsComponent ],
       providers: [ DataService ],

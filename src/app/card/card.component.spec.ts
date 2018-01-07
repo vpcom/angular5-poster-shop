@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule, combineReducers } from '@ngrx/store';
+import { reducers } from '../store';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -10,7 +12,10 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
+      imports: [
+        RouterTestingModule,
+        StoreModule.forRoot(reducers)
+      ],
       declarations: [ CardComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })

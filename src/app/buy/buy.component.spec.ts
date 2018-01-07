@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule, combineReducers } from '@ngrx/store';
+import { reducers } from '../store';
 
 import { BuyComponent } from './buy.component';
 
@@ -8,7 +10,8 @@ describe('BuyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuyComponent ]
+      declarations: [ BuyComponent ],
+      imports: [ StoreModule.forRoot(reducers) ],
     })
     .compileComponents();
   }));
