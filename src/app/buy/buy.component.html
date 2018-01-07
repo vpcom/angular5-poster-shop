@@ -1,12 +1,17 @@
 <div id="cart-container">
-    <div id="cart-content">
-      <p *ngIf="(posterList$ | async).length === 0">
-        Well, nothing to buy yet...
-      </p>
-      <div *ngIf="(posterList$ | async).length !== 0">
-        <div *ngFor="let poster of posterList$ | async" >
-          <span class="card-title">{{ poster.name }}</span><br>
-        </div>
+  <div id="cart-content">
+    <p *ngIf="(posterList$ | async).length === 0">
+      Well, nothing to buy yet...
+    </p>
+    <div *ngIf="(posterList$ | async).length !== 0">
+      <div *ngFor="let poster of posterList$ | async" >
+        <span class="card-title">{{ poster.name }}</span><br>
       </div>
     </div>
   </div>
+</div>
+<p>
+  Here, there must be a form to take the customers information.<br>
+  The information must be well validated, the form must be tested.<br>
+  After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
+</p>
