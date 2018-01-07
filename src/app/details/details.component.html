@@ -1,17 +1,18 @@
 
 <mat-card>
-  <mat-card-header>
+  <mat-card-header fxLayout>
     <mat-card-title><h2 class="card-title">{{ (observableItem | async)?.name }}</h2></mat-card-title>
+    <mat-card-actions>
+      <button mat-button>BUY</button>
+    </mat-card-actions>
   </mat-card-header>
-  <div class="image-container">
-    <img src="{{ baseUrl }}{{ (observableItem | async)?.img }}" alt="A space invader poster">
-  </div>
-  <mat-card-content>
-    <p>
-      {{ (observableItem | async)?.text }}
-    </p>
+
+  <mat-card-content fxLayout>
+    <div class="image-container" ngClass.xs="center-image-mobile">
+      <img src="{{ baseUrl }}{{ (observableItem | async)?.img }}" alt="A space invader poster">
+    </div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>BUY</button>
-  </mat-card-actions>
+  <p>
+    {{ (observableItem | async)?.text }}
+  </p>
 </mat-card>

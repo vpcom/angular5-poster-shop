@@ -1,8 +1,8 @@
+@import '../../assets/style/var';
 
 footer {
-    // var ... height -> padding body
-    height: 50px;
-    line-height: 50px;
+    height: $footer-height;
+    line-height: $footer-height;
     position: fixed; 
 
     bottom: 0;
@@ -12,7 +12,7 @@ footer {
     text-align: center;
     z-index: 10;
 
-    background-color: #334455;
+    background-color: $footer-color;
 
     a[href].visible {
         color:#88aacc;

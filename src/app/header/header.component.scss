@@ -1,12 +1,17 @@
 @import '../../assets/style/var';
 
 header {
-    background-color: #88aacc;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: $header-height;
 
-    height: 80px;
     align-items: center;
-
     display: flex;
+
+    background-color: $header-color;
 
     img {
         padding-left: 10px;

@@ -15,10 +15,10 @@ html * {
 html, body { 
     margin:0; 
     padding:0; 
-}
-body {
-    // TODO var footer heigth
-    padding-bottom: 50px;
+
+    // allows perfect sidenav on mobile
+    // but inducts top and bottom adjustments on the content
+    height: 100%;
 }
 
 a:link, a:visited, a:active {
