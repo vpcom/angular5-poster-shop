@@ -6,6 +6,10 @@
 
 This is a small-sized project aiming at experiencing the combination of basic components and technics with Angular 5.
 
+### Demo
+
+http://vincentperrin.com/poster-shop/angular/
+
 ## Project description
 
 ### General description
