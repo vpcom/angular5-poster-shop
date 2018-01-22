@@ -60,6 +60,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store';
+// reactive form
+import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 
 
 @NgModule({
@@ -116,6 +118,8 @@ import { reducers } from './store';
     MatTooltipModule,
     
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     AppRoutingModule,
     StoreModule.forRoot(reducers),
@@ -123,7 +127,8 @@ import { reducers } from './store';
   ],
   providers: [
     CartNotificationService,
-    DataService
+    DataService,
+    FormBuilder
   ],
   bootstrap: [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

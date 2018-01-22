@@ -1,19 +1,69 @@
 <div id="cart-container">
   <div id="cart-content">
+
+    <p>
+      Note: <br>
+      Here, there must be a form to take the customers information.<br>
+      The information must be well validated, the form must be tested.<br>
+      After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
+    </p>
+
     <p *ngIf="(posterList$ | async).length === 0">
       Well, nothing to buy yet...
     </p>
-    <div *ngIf="(posterList$ | async).length !== 0">
+    <!-- temp 
+    <div *ngIf="(posterList$ | async).length !== 0"> 
       List of posters to buy:
       <div *ngFor="let poster of posterList$ | async" >
         <span class="card-title">{{ poster.name }}</span><br>
       </div>
+    -->
+    <div *ngIf="(posterList$ | async).length === 0">
+
+      <section>
+        <form class="item-form" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
+          <div class="align-right">  
+            <mat-slide-toggle class=""
+              formControlName="advertising" 
+              labelPosition="before"
+              [checked]="client.advertising">
+                Advertising
+            </mat-slide-toggle>
+          </div>
+
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="50%">
+              <mat-form-field class="all-width">
+                <input formControlName="firstName" matInput placeholder="First Name" value="{{ client.firstName }}">
+                <span class="additional-info" matSuffix>test</span>
+              </mat-form-field>
+              
+              <mat-form-field class="all-width">
+                <input formControlName="lastName" matInput placeholder="Last Name" value="{{ client.lastName }}">
+                <span class="additional-info" matSuffix>test</span>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="50%" class="align-right">  
+                <mat-radio-group formControlName="newsLetter">News Letter
+                    <mat-radio-button value="1">Yes</mat-radio-button>
+                    <mat-radio-button value="2">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+          </div>
+          <div fxLayout="row">
+            <mat-form-field class="all-width">
+              <mat-placeholder><mat-icon>chat_bubble</mat-icon><i> Comment</i></mat-placeholder>
+              <textarea matInput value="{{ client.comment }}" formControlName="comment"></textarea>
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row">
+            <button class="save-button" mat-button [disabled]="!buyForm.valid">Save</button>
+          </div>
+        </form>
+                    
+      </section>
     </div>
   </div>
 </div>
-<p>
-  Note: <br>
-  Here, there must be a form to take the customers information.<br>
-  The information must be well validated, the form must be tested.<br>
-  After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
-</p>
