@@ -20,13 +20,13 @@
     <p *ngIf="(posterList$ | async).length === 0">
       Well, nothing to buy yet...
     </p>
-    <!-- temp 
+    
     <div *ngIf="(posterList$ | async).length !== 0"> 
       List of posters to buy:
       <div *ngFor="let poster of posterList$ | async" >
         <span class="card-title">{{ poster.name }}</span><br>
       </div>
-    -->
+    
     <div *ngIf="(posterList$ | async).length === 0">
 
       <section>
