@@ -5,7 +5,7 @@ import * as fromRouter from '@ngrx/router-store';
 
 import { CartState, cartReducer } from './cart.reducer';
 
-import { PosterType } from '../shared/poster.type';
+import { PosterType } from '../shared/model/poster.type';
 
 /** 
  * As mentioned, we treat each reducer like a table in a database. This means

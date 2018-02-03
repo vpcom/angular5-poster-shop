@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ObservableMedia } from '@angular/flex-layout';
 import { Subscription } from 'rxjs/Subscription';
 
-import { CartNotificationService } from '../shared/cart-notification.service';
+import { CartNotificationService } from '../shared/services/cart-notification.service';
 
 @Component({
   selector: 'app-main',

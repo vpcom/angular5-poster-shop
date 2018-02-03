@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 
-import { CartNotificationService } from '../shared/cart-notification.service';
+import { CartNotificationService } from '../shared/services/cart-notification.service';
 
 @Component({
   selector: 'app-notif',

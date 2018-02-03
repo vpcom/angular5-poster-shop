@@ -1,6 +1,6 @@
 import {Action} from '@ngrx/store';
 
-import { PosterType, emptyPoster } from '../shared/poster.type';
+import { PosterType, emptyPoster } from '../shared/model/poster.type';
 
 export interface CartState {
   cartContent: PosterType[];

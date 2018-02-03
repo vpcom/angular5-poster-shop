@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { trigger, state, animate, transition, style } from '@angular/animations';
 
-import { DataService } from '../shared/data.service';
-import { PosterType } from '../shared/poster.type';
+import { DataService } from '../shared/services/data.service';
+import { PosterType } from '../shared/model/poster.type';
 
 @Component({
   selector: 'app-home',

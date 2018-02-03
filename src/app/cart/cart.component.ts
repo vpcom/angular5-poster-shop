@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
 
-import { PosterType } from '../shared/poster.type';
+import { PosterType } from '../shared/model/poster.type';
 import { environment } from '../../environments/environment';
 
 

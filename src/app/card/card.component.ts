@@ -3,7 +3,7 @@ import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
 import { Subscription } from 'rxjs/Subscription';
 
-import { PosterType } from '../shared/poster.type';
+import { PosterType } from '../shared/model/poster.type';
 import { ADD } from './../store/cart.reducer';
 import { environment } from '../../environments/environment';
 

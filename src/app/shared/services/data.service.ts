@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { PosterType } from './poster.type';
+import { PosterType } from '../model/poster.type';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class DataService {

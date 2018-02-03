@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 // import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { PosterType } from '../shared/poster.type';
+import { PosterType } from '../shared/model/poster.type';
 import { environment } from '../../environments/environment';
 
 @Component({

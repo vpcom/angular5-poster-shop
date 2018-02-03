@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Store } from "@ngrx/store";
 
-import { DataService } from '../shared/data.service';
-import { PosterType } from '../shared/poster.type';
+import { DataService } from '../shared/services/data.service';
+import { PosterType } from '../shared/model/poster.type';
 
 import { environment } from '../../environments/environment';
 

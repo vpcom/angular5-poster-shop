@@ -53,8 +53,8 @@ import { CardComponent } from './card/card.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 // Services
-import { CartNotificationService } from './shared/cart-notification.service';
-import { DataService } from './shared/data.service';
+import { CartNotificationService } from './shared/services/cart-notification.service';
+import { DataService } from './shared/services/data.service';
 // router, store and reducers
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule, combineReducers } from '@ngrx/store';
