@@ -1,34 +1,51 @@
 <div id="cart-container">
   <div id="cart-content">
-<h3>Pending work...</h3>
-    <p>
-      Todo<br>
-      <br>
-      List of items as a reminder<br>
-      <br>
-      Form:<br>
-      - First name<br>
-      - Last name<br>
-      - E-mail<br>
-      - Drop down Payment method <br>
-      - Toggle Agreement<br>
-      <br>
-      Validation without obligation<br>
-      After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
-    </p>
 
-    <p *ngIf="(posterList$ | async).length === 0">
-      Well, nothing to buy yet...
-    </p>
-    
-    <div *ngIf="(posterList$ | async).length !== 0"> 
+  <h3>Pending work...</h3>
+  <p>
+    Todo<br>
+    <br>
+    - !!! TESTS !!!<br>
+    - close the panel when in /buy/<br>
+    - number of articles in the cart<br>
+    <br>
+    Form:<br>
+    - First name<br>
+    - Last name<br>
+    - E-mail<br>
+    - Drop down Payment method <br>
+    - Toggle Agreement<br>
+    <br>
+    Validation without obligation<br>
+    After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
+  </p>
+
+  <p *ngIf="(posterList$ | async).length === 0">
+    Well, nothing to buy yet...
+  </p>
+      
+  <div *ngIf="(posterList$ | async).length !== 0"> 
       List of posters to buy:
-      <div *ngFor="let poster of posterList$ | async" >
-        <span class="card-title">{{ poster.name }}</span><br>
-      </div>
+      <ul>
+        <li *ngFor="let poster of posterList$ | async" >
+          <span class="card-title">{{ poster.name }}</span><br> 
+        </li>
+      </ul>
     
-    <div *ngIf="(posterList$ | async).length === 0">
+    <div *ngIf="(posterList$ | async).length !== 0">
 
+    <div id="card-container" fxLayout.xs="column">
+
+        <div *ngFor="let poster of posterList$ | async" >
+              <img height="100" src="{{ baseUrl }}{{ poster.img }}">
+        </div>
+    </div>
+
+    <!-- TODO -->
+    <!-- TODO -->
+    <!-- TODO -->
+    <!-- TODO -->
+    <!-- TODO -->
       <section>
         <form class="item-form" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
           <div class="align-right">  
