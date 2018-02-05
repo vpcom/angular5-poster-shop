@@ -32,3 +32,9 @@ a:hover {
 .align-right {
     text-align: right;
 }
+
+// Flex-layout hack for the container of the flex element
+.unflex {
+    display: block !important;
+}
+

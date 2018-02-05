@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { DetailsComponent } from './details.component';
 
-import { DataService } from '../shared/data.service';
+import { DataService } from '../shared/services/data.service';
 
 describe('DetailsComponent', () => {
   let component: DetailsComponent;

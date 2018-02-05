@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotifComponent } from './notif.component';
 
-import { CartNotificationService } from '../shared/cart-notification.service';
+import { CartNotificationService } from '../shared/services/cart-notification.service';
 
 describe('NotifComponent', () => {
   let component: NotifComponent;

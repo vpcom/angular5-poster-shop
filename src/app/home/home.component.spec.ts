@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { HomeComponent } from './home.component';
 
-import { DataService } from '../shared/data.service';
+import { DataService } from '../shared/services/data.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

@@ -17,14 +17,15 @@
     - Toggle Agreement<br>
     <br>
     Validation without obligation<br>
+    - Material theming<br>
     After the validation, the purchase must be saved in the browser local storage and visible in the logs page.
   </p>
 
   <p *ngIf="(posterList$ | async).length === 0">
     Well, nothing to buy yet...
   </p>
-      
-  <div *ngIf="(posterList$ | async).length !== 0"> 
+  <!-- <div *ngIf="(posterList$ | async).length !== 0"> -->
+      <div>
       List of posters to buy:
       <ul>
         <li *ngFor="let poster of posterList$ | async" >
@@ -32,7 +33,8 @@
         </li>
       </ul>
     
-    <div *ngIf="(posterList$ | async).length !== 0">
+      <!-- <div *ngIf="(posterList$ | async).length !== 0"> -->
+          <div>
 
     <div id="card-container" fxLayout.xs="column">
 
@@ -47,42 +49,54 @@
     <!-- TODO -->
     <!-- TODO -->
       <section>
-        <form class="item-form" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
-          <div class="align-right">  
-            <mat-slide-toggle class=""
-              formControlName="advertising" 
-              labelPosition="before"
-              [checked]="client.advertising">
-                Advertising
-            </mat-slide-toggle>
-          </div>
+        <form class="item-form unflex" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
 
-          <div fxLayout="row" fxLayout.xs="column">
-            <div fxFlex="50%">
-              <mat-form-field class="all-width">
-                <input formControlName="firstName" matInput placeholder="First Name" value="{{ client.firstName }}">
-                <span class="additional-info" matSuffix>test</span>
-              </mat-form-field>
-              
-              <mat-form-field class="all-width">
-                <input formControlName="lastName" matInput placeholder="Last Name" value="{{ client.lastName }}">
-                <span class="additional-info" matSuffix>test</span>
-              </mat-form-field>
-            </div>
-
-            <div fxFlex="50%" class="align-right">  
-                <mat-radio-group formControlName="newsLetter">News Letter
-                    <mat-radio-button value="1">Yes</mat-radio-button>
-                    <mat-radio-button value="2">No</mat-radio-button>
-                </mat-radio-group>
-            </div>
-          </div>
-          <div fxLayout="row">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
             <mat-form-field class="all-width">
-              <mat-placeholder><mat-icon>chat_bubble</mat-icon><i> Comment</i></mat-placeholder>
-              <textarea matInput value="{{ client.comment }}" formControlName="comment"></textarea>
+              <input formControlName="firstName" matInput placeholder="First Name" value="{{ client.firstName }}">
+              <span class="additional-info" matSuffix>test</span>
+            </mat-form-field>
+
+            <mat-form-field class="all-width">
+              <input formControlName="lastName" matInput placeholder="Last Name" value="{{ client.lastName }}">
+              <span class="additional-info" matSuffix>test</span>
             </mat-form-field>
           </div>
+
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" formControlName="email"
+                       >
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="buyForm.hasError('email', 'email') && buyForm.get('email').touched">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="buyForm.hasError('email', 'required') && buyForm.get('email').touched">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-radio-group fxFlexAlign="right" formControlName="newsLetter">News Letter
+                  <mat-radio-button value="1">Yes</mat-radio-button>
+                  <mat-radio-button value="2">No</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column">
+          <mat-form-field>
+              <mat-select placeholder="Payment type">
+                <mat-option *ngFor="let paymentType of [{'value': 'free'}]" [value]="paymentType.value">
+                  {{ paymentType.value }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">  
+              <mat-slide-toggle class=""
+                formControlName="agreement" 
+                labelPosition="before"
+                [checked]="client.agreement">
+                  Agreement
+              </mat-slide-toggle>
+            </div>
 
           <div fxLayout="row">
             <button class="save-button" mat-button [disabled]="!buyForm.valid">Save</button>

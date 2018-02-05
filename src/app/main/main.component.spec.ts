@@ -4,7 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MainComponent } from './main.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CartNotificationService } from '../shared/cart-notification.service';
+import { CartNotificationService } from '../shared/services/cart-notification.service';
 
 describe('MainComponent', () => {
   let component: MainComponent;
