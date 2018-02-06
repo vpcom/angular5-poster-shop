@@ -1,6 +1,6 @@
 # Angular 5 poster shop
 
-**!!! Project in progress** !!!**
+**!!! Project in progress !!!**
 
 ## In short
 
