@@ -32,9 +32,7 @@ And navigate to `http://localhost:4200/`. The app will automatically reload if y
 
 ## Running tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-Note: 'ng test -sm=false' (-sm = --sourcemaps) to see the real bug when it breaks too much.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io), or 'ng test -sm=false' (-sm = --sourcemaps) for some debuging.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
