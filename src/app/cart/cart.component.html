@@ -4,7 +4,7 @@
       Your cart is empty, select the poster of your dreams!
     </p>
     <div *ngIf="(posterList$ | async).length !== 0">
-      <button mat-button [routerLink]="['../buy']">BUY</button>
+      <button id="buy-button" mat-button [routerLink]="['../buy']">BUY</button>
       <div *ngFor="let poster of posterList$ | async" >
 
         <!-- Mini-card (ment to be a component) -->

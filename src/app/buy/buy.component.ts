@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
 
-// import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 
 import { PosterType } from '../shared/model/poster.type';
@@ -26,7 +25,7 @@ export class BuyComponent implements OnInit {
   baseUrl: string = environment.production ?
       environment.baseHref + '/assets/img/' : '../../assets/img/';
 
-  client : {};
+  client: object;
   
   buyForm: FormGroup;
 
@@ -35,9 +34,7 @@ export class BuyComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    // TODO temp...
-    // default values
+    // TODO make a type def
     this.client = {
       firstName: '',
       lastName: '',
@@ -45,10 +42,7 @@ export class BuyComponent implements OnInit {
       newsLetter: false,
       agreement: false
     };
-
-
     this.createForm();
-
   }
 
   createForm() {
@@ -64,17 +58,15 @@ export class BuyComponent implements OnInit {
       ]],
       'email': [this.client['email'], [Validators.required, Validators.email]],
       'newsLetter': [this.client['newsLetter']],
-      // [this.client['email'], [
-      //   Validators.required,
-      // ]],
-
       'agreement': this.client['agreement']? '1' : '2',
     });
   }
   
 
+  // TODO and more
   onSubmit() {
     let stringToStore = '';
+    console.log(this.buyForm.value.newsLetter);
 
     // translating radio button values
     this.buyForm.value.newsLetter =
@@ -88,14 +80,11 @@ export class BuyComponent implements OnInit {
 
     // // debug confirmation
     // console.log(localStorage[this.storageId]);
+
+    // redirection
+    window.location.href = '/logs';
   }
   
-  getErrorMessage() {
-    return this.client.email.hasError('required') ? 'You must enter a value' :
-        this.client.email.hasError('email') ? 'Not a valid email' :
-            '';
-  }
-
   matcher = new MyErrorStateMatcher();
 
 }

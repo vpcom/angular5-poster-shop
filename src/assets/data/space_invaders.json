@@ -46,29 +46,5 @@
         "name": "Space invaders in colors",
         "img": "space-invaders-rainbow.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros tellus, lacinia non diam sit amet, ultrices suscipit enim. Pellentesque fermentum commodo enim, a pharetra risus dictum quis. Curabitur nunc nisi, facilisis a congue nec, rutrum eget ligula. In placerat augue vitae odio pharetra egestas. Nulla condimentum eu velit eget fringilla. Maecenas at erat in elit varius aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce feugiat, nisi et sollicitudin pretium, orci dolor hendrerit mauris, ac dictum odio quam ut dui. Cras non turpis fermentum, accumsan nibh vitae, rutrum tortor. In et dapibus est, et luctus neque. In convallis diam eu quam condimentum, nec interdum elit posuere. Curabitur a nisl blandit est gravida pharetra. Pellentesque mauris libero, imperdiet ac quam et, euismod lacinia nisl. Donec congue et mi nec iaculis. Mauris interdum a eros a iaculis. Praesent et nunc eget mauris venenatis eleifend."
-    },
-    {
-        "id": 9,
-        "name": "Space invaders poster",
-        "img": "space-invaders.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec diam purus. Nunc porttitor eu magna ac tempus. Maecenas congue urna et risus sodales pharetra. Suspendisse vitae ante et lectus cursus lacinia. Sed quis maximus arcu. Pellentesque laoreet in nibh et convallis. Sed efficitur metus vitae metus maximus consectetur. Cras molestie consectetur tellus vitae euismod. Donec non nibh sed odio euismod consectetur. Nam tincidunt velit a libero mollis mattis a nec magna. Cras non lobortis risus. Nullam accumsan tellus quis sollicitudin porta. Ut ut dolor eget dui hendrerit iaculis. Proin non sodales nisl. Nam fermentum massa nec feugiat tincidunt. Aliquam imperdiet pharetra aliquet. Etiam ut ultricies nunc, et condimentum magna. Nulla faucibus diam sem, sed venenatis nunc sodales ut. Quisque ullamcorper feugiat sollicitudin."
-    },
-    {
-        "id": 10,
-        "name": "Japanese Invader",
-        "img": "space-invaders-japanese.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices, augue in consectetur aliquet, neque diam fringilla ante, ac imperdiet ex eros ut ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus iaculis vestibulum turpis quis commodo. Nullam ultricies hendrerit lacus, a tempus nunc tempus eget. Phasellus rhoncus porta congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque egestas quis ligula non varius. Fusce egestas nunc sit amet pharetra imperdiet. Mauris nec gravida ante. Aliquam quis purus dui. Nunc dapibus, massa ut mollis fermentum, ipsum lacus pellentesque nunc, ut laoreet libero velit a quam. Maecenas elementum et massa vitae bibendum. Donec scelerisque dui ut ultrices dictum. Donec pharetra iaculis sapien id placerat. Pellentesque eu consequat arcu. Nunc porttitor euismod neque vitae imperdiet. Proin egestas ipsum et eleifend consequat. Ut commodo gravida ex. "
-    },
-    {
-        "id": 11,
-        "name": "Glowing space invaders",
-        "img": "space-invaders-glowing.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend laoreet hendrerit. Suspendisse est tortor, pulvinar non pharetra eget, volutpat at nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Morbi consectetur sapien turpis, ut condimentum felis suscipit eu. Duis vulputate risus at ex tincidunt, ut sagittis elit sollicitudin. Aenean vel turpis nec lacus ullamcorper iaculis. Nunc suscipit tellus nec fringilla maximus. Pellentesque imperdiet mi ac nibh condimentum molestie. Maecenas mattis odio a purus vehicula, at pellentesque magna elementum. Praesent eget libero in eros tempus consectetur. Morbi tempor dictum lacus nec ultrices. Nunc bibendum laoreet est vel mollis. Donec ac erat suscipit, fermentum metus id, egestas erat. Integer pulvinar volutpat laoreet. Duis molestie sapien ac porttitor consequat. Donec pellentesque laoreet dui id suscipit. Sed quam felis, sollicitudin quis lorem a, condimentum ultrices enim. Proin aliquet erat et bibendum malesuada."
-    },
-    {
-        "id": 12,
-        "name": "Space invaders in colors",
-        "img": "space-invaders-rainbow.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros tellus, lacinia non diam sit amet, ultrices suscipit enim. Pellentesque fermentum commodo enim, a pharetra risus dictum quis. Curabitur nunc nisi, facilisis a congue nec, rutrum eget ligula. In placerat augue vitae odio pharetra egestas. Nulla condimentum eu velit eget fringilla. Maecenas at erat in elit varius aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce feugiat, nisi et sollicitudin pretium, orci dolor hendrerit mauris, ac dictum odio quam ut dui. Cras non turpis fermentum, accumsan nibh vitae, rutrum tortor. In et dapibus est, et luctus neque. In convallis diam eu quam condimentum, nec interdum elit posuere. Curabitur a nisl blandit est gravida pharetra. Pellentesque mauris libero, imperdiet ac quam et, euismod lacinia nisl. Donec congue et mi nec iaculis. Mauris interdum a eros a iaculis. Praesent et nunc eget mauris venenatis eleifend."
     }
 ]}

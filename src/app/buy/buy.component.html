@@ -1,7 +1,11 @@
+
+<p>
+  Under construction!
+</p>
+
 <div id="cart-container">
   <div id="cart-content">
 
-  <h3>Pending work...</h3>
   <p>
     Todo<br>
     <br>
@@ -42,14 +46,8 @@
               <img height="100" src="{{ baseUrl }}{{ poster.img }}">
         </div>
     </div>
-
-    <!-- TODO -->
-    <!-- TODO -->
-    <!-- TODO -->
-    <!-- TODO -->
-    <!-- TODO -->
       <section>
-        <form class="item-form unflex" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
+        <form id="buy-form" class="item-form unflex" [formGroup]="buyForm" (ngSubmit)="onSubmit(buyForm)" novalidate>
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
             <mat-form-field class="all-width">
