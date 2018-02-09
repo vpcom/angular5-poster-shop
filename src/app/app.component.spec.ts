@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -8,6 +10,11 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();

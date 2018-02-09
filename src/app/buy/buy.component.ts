@@ -2,7 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
 
-import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import { 
+  FormBuilder, 
+  FormGroup, 
+  Validators, 
+  FormControl, 
+  FormGroupDirective, 
+  NgForm
+} from '@angular/forms';
 
 import { PosterType } from '../shared/model/poster.type';
 import { environment } from '../../environments/environment';
@@ -39,8 +46,8 @@ export class BuyComponent implements OnInit {
       firstName: '',
       lastName: '',
       email: '',
-      newsLetter: false,
-      agreement: false
+      newsLetter: ['1'],
+      agreement: ['1']
     };
     this.createForm();
   }
@@ -57,8 +64,8 @@ export class BuyComponent implements OnInit {
         Validators.minLength(2)
       ]],
       'email': [this.client['email'], [Validators.required, Validators.email]],
-      'newsLetter': [this.client['newsLetter']],
-      'agreement': this.client['agreement']? '1' : '2',
+      'newsLetter': [this.client['newsLetter']? ['1'] : ['2'], [Validators.required]],
+      'agreement': [this.client['agreement']? ['1'] : ['2']],
     });
   }
   
@@ -66,11 +73,11 @@ export class BuyComponent implements OnInit {
   // TODO and more
   onSubmit() {
     let stringToStore = '';
-    console.log(this.buyForm.value.newsLetter);
+    //console.log(this.buyForm.value.newsLetter);
 
     // translating radio button values
-    this.buyForm.value.newsLetter =
-        this.buyForm.value.newsLetter === '1' ? true : false;
+    // this.buyForm.value.newsLetter =
+    //     this.buyForm.value.newsLetter === '1' ? true : false;
 
     // the object must be stored as a string
     stringToStore = JSON.stringify(this.buyForm.value);

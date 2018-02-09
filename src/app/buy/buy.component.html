@@ -63,8 +63,7 @@
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Email" formControlName="email"
-                       >
+                <input matInput placeholder="Email" formControlName="email">
                 <mat-hint>Errors appear instantly!</mat-hint>
                 <mat-error *ngIf="buyForm.hasError('email', 'email') && buyForm.get('email').touched">
                   Please enter a valid email address
@@ -73,9 +72,9 @@
                   Email is <strong>required</strong>
                 </mat-error>
               </mat-form-field>
-              <mat-radio-group fxFlexAlign="right" formControlName="newsLetter">News Letter
-                  <mat-radio-button value="1">Yes</mat-radio-button>
-                  <mat-radio-button value="2">No</mat-radio-button>
+              <mat-radio-group fxFlexAlign="right" name="newsLetter">News Letter
+                  <mat-radio-button formControlName="newsLetter" ngDefaultControl value="1">Yes</mat-radio-button>
+                  <mat-radio-button formControlName="newsLetter" ngDefaultControl value="2">No</mat-radio-button>
               </mat-radio-group>
           </div>
           <div fxLayout="row" fxLayout.xs="column">
@@ -88,13 +87,14 @@
             </mat-form-field>
           </div>
           <div fxLayout="row">  
-              <mat-slide-toggle class=""
-                formControlName="agreement" 
-                labelPosition="before"
-                [checked]="client.agreement">
-                  Agreement
-              </mat-slide-toggle>
-            </div>
+            <mat-slide-toggle class=""
+              formControlName="agreement" 
+              ngDefaultControl
+              labelPosition="before"
+              [checked]="client.agreement">
+                Agreement
+            </mat-slide-toggle>
+          </div>
 
           <div fxLayout="row">
             <button class="save-button" mat-button [disabled]="buyForm.valid !== buyForm.valid">Save</button>

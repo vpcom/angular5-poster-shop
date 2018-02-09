@@ -1,6 +1,12 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { reducers } from '../store';
+
+import { 
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 import { BuyComponent } from './buy.component';
 
@@ -11,7 +17,12 @@ describe('BuyComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ BuyComponent ],
-      imports: [ StoreModule.forRoot(reducers) ],
+      imports: [ 
+        StoreModule.forRoot(reducers),
+        FormsModule,
+        ReactiveFormsModule
+       ],
+       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
